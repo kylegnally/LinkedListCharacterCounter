@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LinkedListCharacterCounter
 {
@@ -50,7 +51,6 @@ namespace LinkedListCharacterCounter
         private static void HandleFile(char[] chars)
         {
             LinkedList<CharacterFrequency> frequencyList = new LinkedList<CharacterFrequency>();
-            CharacterFrequency aCharacterInlist = new CharacterFrequency(chars[0]);
 
             // foreach on my char array
                 // foreach on the linked list
@@ -59,55 +59,13 @@ namespace LinkedListCharacterCounter
 
             foreach (char aCharacter in chars)
             {
-                foreach (CharacterFrequency frequency in frequencyList)
-                {
-                    frequencyList.AddLast(frequency);
-                    frequency.Character = aCharacter;
-                    frequency.IncrementFrequency();
-                }
+                CharacterFrequency cf = new CharacterFrequency(aCharacter);
+                frequencyList.AddLast(cf);
+
+                
             }
 
-            //String str = "picture perfect";
-            //int[] freq = new int[str.Length];
-            //int i, j;
 
-            ////Converts given string into character array  
-            //char[] string1 = str.ToCharArray();
-
-            //for (i = 0; i < str.Length; i++)
-            //{
-            //    freq[i] = 1;
-            //    for (j = i + 1; j < str.Length; j++)
-            //    {
-            //        if (string1[i] == string1[j])
-            //        {
-            //            freq[i]++;
-
-            //            //Set string1[j] to 0 to avoid printing visited character  
-            //            string1[j] = '0';
-            //        }
-            //    }
-            //}
-            //CharacterFrequency[] allCharsAsObj = new CharacterFrequency[chars.Length];
-            //int outer, inner;   // name the loops so I don't get lost
-            //for (outer = 0; outer < chars.Length; outer++)
-            //{
-            //    allCharsAsObj[outer].Frequency = 1;
-            //    for (inner = outer + 1; outer < chars.Length; outer++)
-            //    {
-            //        if (chars[outer] == chars[inner])
-            //        {
-            //            allCharsAsObj[outer].Frequency++;
-            //            chars[inner] = '0';
-            //        }
-            //    }
-            //}
-
-            //foreach (CharacterFrequency character in allCharsAsObj)
-            //{
-            //    Console.WriteLine("Character " + character.Character + " appears " + character.Frequency + " times in the array.");
-            //}
-            //Console.WriteLine("Have a day!");
         }
     }
 }
