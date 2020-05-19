@@ -63,14 +63,21 @@ namespace LinkedListCharacterCounter
                 frequencyList.AddLast(cf);
                 foreach (CharacterFrequency freq in frequencyList)
                 {
-                    // if the character is equal to aCharacter
-                    if (freq.Character.Equals(aCharacter))
+                    if (frequencyList.Contains(new CharacterFrequency(aCharacter)))
                     {
-                        freq.IncrementFrequency();
+                        if (freq.Character.Equals(aCharacter))
+                        {
+                            freq.IncrementFrequency();
+                        }
                     }
+                    // if the character is equal to aCharacter
+                    //if (freq.Character.Equals(aCharacter))
+                    //{
+                    //    freq.IncrementFrequency();
+                    //}
                 }
             }
-            Console.WriteLine("loop complete.");
+            Console.WriteLine("We're out of the loop.");
         }
     }
 }
