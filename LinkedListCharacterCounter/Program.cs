@@ -61,10 +61,9 @@ namespace LinkedListCharacterCounter
             {
                 foreach (CharacterFrequency frequency in frequencyList)
                 {
-                    if ( /* the character we're evaluating equals the one in the linked list */ )
-                    {
-                        // increment the frequency of that character
-                    }
+                    frequencyList.AddLast(frequency);
+                    frequency.Character = aCharacter;
+                    frequency.IncrementFrequency();
                 }
             }
 
