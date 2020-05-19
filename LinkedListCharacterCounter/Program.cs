@@ -59,6 +59,28 @@ namespace LinkedListCharacterCounter
             {
                 if (frequencyList.First == null) frequencyList.AddFirst(aCharacter.)
             }
+
+            //String str = "picture perfect";
+            //int[] freq = new int[str.Length];
+            //int i, j;
+
+            ////Converts given string into character array  
+            //char[] string1 = str.ToCharArray();
+
+            //for (i = 0; i < str.Length; i++)
+            //{
+            //    freq[i] = 1;
+            //    for (j = i + 1; j < str.Length; j++)
+            //    {
+            //        if (string1[i] == string1[j])
+            //        {
+            //            freq[i]++;
+
+            //            //Set string1[j] to 0 to avoid printing visited character  
+            //            string1[j] = '0';
+            //        }
+            //    }
+            //}
             //CharacterFrequency[] allCharsAsObj = new CharacterFrequency[chars.Length];
             //int outer, inner;   // name the loops so I don't get lost
             //for (outer = 0; outer < chars.Length; outer++)
