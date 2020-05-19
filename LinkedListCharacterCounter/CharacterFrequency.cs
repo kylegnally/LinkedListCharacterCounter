@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LinkedListCharacterCounter
 {
@@ -16,6 +12,13 @@ namespace LinkedListCharacterCounter
 
         public CharacterFrequency(char aChar)
         {
+            Character = aChar;
+            Frequency = 0;
+        }
+        public CharacterFrequency(char aChar, long charCount)
+        {
+            Character = aChar;
+            Frequency = charCount;
         }
 
         public void IncrementFrequency()
@@ -23,9 +26,13 @@ namespace LinkedListCharacterCounter
             _freq++;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object aChar)
         {
-            return base.Equals(obj);    
+            bool equal = false;
+            CharacterFrequency frequency = new CharacterFrequency((char)aChar);
+            frequency = (CharacterFrequency) aChar;
+            if (this.Character == frequency.Character) equal = true;
+            return equal;
         }
 
         public override string ToString()

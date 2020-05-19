@@ -1,9 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LinkedListCharacterCounter
 {
@@ -55,9 +52,20 @@ namespace LinkedListCharacterCounter
             LinkedList<CharacterFrequency> frequencyList = new LinkedList<CharacterFrequency>();
             CharacterFrequency aCharacterInlist = new CharacterFrequency(chars[0]);
 
+            // foreach on my char array
+                // foreach on the linked list
+                    //equality test
+                        //if true, increment freq
+
             foreach (char aCharacter in chars)
             {
-                if (frequencyList.First == null) frequencyList.AddFirst(aCharacter.)
+                foreach (CharacterFrequency frequency in frequencyList)
+                {
+                    if ( /* the character we're evaluating equals the one in the linked list */ )
+                    {
+                        // increment the frequency of that character
+                    }
+                }
             }
 
             //String str = "picture perfect";
