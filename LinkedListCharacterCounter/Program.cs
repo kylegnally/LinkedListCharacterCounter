@@ -51,33 +51,23 @@ namespace LinkedListCharacterCounter
         private static void HandleFile(char[] chars)
         {
             LinkedList<CharacterFrequency> frequencyList = new LinkedList<CharacterFrequency>();
-
-            // foreach on my char array
-                // foreach on the linked list
-                    //equality test
-                        //if true, increment freq
-
+            
             foreach (char aCharacter in chars)
             {
                 CharacterFrequency cf = new CharacterFrequency(aCharacter);
-                frequencyList.AddLast(cf);
-                foreach (CharacterFrequency freq in frequencyList)
+                
+                if (frequencyList.Contains(new CharacterFrequency(aCharacter)))
                 {
-                    if (frequencyList.Contains(new CharacterFrequency(aCharacter)))
-                    {
-                        if (freq.Character.Equals(aCharacter))
-                        {
-                            freq.IncrementFrequency();
-                        }
-                    }
-                    // if the character is equal to aCharacter
-                    //if (freq.Character.Equals(aCharacter))
-                    //{
-                    //    freq.IncrementFrequency();
-                    //}
+                    cf.IncrementFrequency(); // ugh, this doesn't work. 
                 }
+                else frequencyList.AddLast(cf);
+
             }
-            Console.WriteLine("We're out of the loop.");
+
+            foreach (CharacterFrequency freq in frequencyList)
+            {
+                Console.WriteLine(freq.ToString());
+            }
         }
     }
 }

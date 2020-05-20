@@ -36,7 +36,7 @@ namespace LinkedListCharacterCounter
         public CharacterFrequency(char aChar)
         {
             Character = aChar;
-            Frequency = 0;
+            Frequency = 1;
         }
         //public CharacterFrequency(char aChar, long charCount)
         //{
