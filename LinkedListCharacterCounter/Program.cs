@@ -66,7 +66,7 @@ namespace LinkedListCharacterCounter
 
             foreach (CharacterFrequency freq in frequencyList)
             {
-                Console.WriteLine(freq.ToString());
+                Console.WriteLine(freq.ToString()); // This outputs everything but the counts, which are 0.
             }
         }
     }
