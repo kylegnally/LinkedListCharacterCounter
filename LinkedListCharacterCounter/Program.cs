@@ -64,6 +64,21 @@ namespace LinkedListCharacterCounter
 
             }
 
+            //LinkedList<CharacterFrequency> frequencyList = new LinkedList<CharacterFrequency>();
+
+            //foreach (char aCharacter in chars)
+            //{
+            //    CharacterFrequency cf = new CharacterFrequency(aCharacter);
+            //    frequencyList.AddLast(cf);
+            //    foreach (CharacterFrequency freq in frequencyList)
+            //    {
+            //        if (frequencyList.Contains(new CharacterFrequency(aCharacter)))
+            //        {
+            //            cf.IncrementFrequency(); // ugh, this doesn't work. 
+            //        }
+            //    }
+            //}
+
             foreach (CharacterFrequency freq in frequencyList)
             {
                 Console.WriteLine(freq.ToString()); // This outputs everything but the counts, which are 0.
