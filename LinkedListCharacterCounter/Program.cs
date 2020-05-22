@@ -52,30 +52,32 @@ namespace LinkedListCharacterCounter
         {
             LinkedList<CharacterFrequency> frequencyList = new LinkedList<CharacterFrequency>();
 
-            // foreach on my char array
-                // foreach on the linked list
-                    //equality test
-                        //if true, increment freq
-
             foreach (char aCharacter in chars)
             {
                 CharacterFrequency cf = new CharacterFrequency(aCharacter);
-                frequencyList.AddLast(cf);
-                foreach (CharacterFrequency freq in frequencyList)
-                {
-                    if (frequencyList.Contains(new CharacterFrequency(aCharacter)))
-                    {
-                        freq.IncrementFrequency();
-                    }
-                    else frequencyList.AddLast(cf);
 
-                    // if the character is equal to aCharacter
-                    //if (freq.Character.Equals(aCharacter))
-                    //{
-                    //    freq.IncrementFrequency();
-                    //}
+                if (frequencyList.Contains(new CharacterFrequency(aCharacter)))
+                {
+                    cf.IncrementFrequency(); // ugh, this doesn't work. 
                 }
+                else frequencyList.AddLast(cf);
+
             }
+
+            //LinkedList<CharacterFrequency> frequencyList = new LinkedList<CharacterFrequency>();
+
+            //foreach (char aCharacter in chars)
+            //{
+            //    CharacterFrequency cf = new CharacterFrequency(aCharacter);
+            //    frequencyList.AddLast(cf);
+            //    foreach (CharacterFrequency freq in frequencyList)
+            //    {
+            //        if (frequencyList.Contains(new CharacterFrequency(aCharacter)))
+            //        {
+            //            cf.IncrementFrequency(); // ugh, this doesn't work. 
+            //        }
+            //    }
+            //}
 
             foreach (CharacterFrequency freq in frequencyList)
             {
